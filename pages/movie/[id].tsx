@@ -3,10 +3,6 @@ import { fetchAPI, baseUrl } from "../../utils/fetchAPI";
 import { Result } from "../../typings";
 
 interface Props {
-  id: string;
-}
-
-interface Props {
   result: Result;
 }
 
