@@ -100,7 +100,13 @@ function movieDetail({ result }: Props) {
 
 export default movieDetail;
 
-export async function getServerSideProps({ params: { id } }) {
+type Params = {
+  params: {
+    id: string;
+  };
+};
+
+export async function getServerSideProps({ params: { id } }: Params) {
   const result = await fetchAPI(`${baseUrl}?q=${id}`);
 
   return {
