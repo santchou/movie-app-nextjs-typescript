@@ -44,7 +44,7 @@ const Home = ({ results }: Props) => {
 
 export default Home;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const results = await fetchAPI(baseUrl);
 
   return {
